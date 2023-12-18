@@ -6,8 +6,8 @@ from django.http import HttpResponse
 from django.shortcuts import redirect, reverse
 
 
-def book_login(request):
-    return HttpResponse("图书APP登录页")
+def book_login(request, book_id):
+    return HttpResponse("图书APP登录页:%s" % book_id)
 
 
 def book(request):
@@ -17,7 +17,9 @@ def book(request):
         #return redirect('login/')
         # return redirect(reverse('book:sso'))
         current_namespace = request.resolver_match.namespace
-        return redirect(reverse('{}:sso'.format(current_namespace)))
+        # return redirect(reverse('{}:sso'.format(current_namespace), kwargs={"book_id":1}))
+        login_url = reverse('{}:sso'.format(current_namespace),kwargs={"book_id":1}) + "?next=/"
+        return redirect(login_url)
 
 
 def book_detail(request, book_id):
