@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include,re_path
+from django.urls import path, include,re_path,converters
 from django.http import HttpResponse
 
 
@@ -37,6 +37,7 @@ urlpatterns = [
     #同一个APP下有两个实例，通过命名空间来进行区分
     path('book1/', include('book.urls', namespace='book1')),
     path('book2/', include('book.urls', namespace='book2')),
+    path('article/', include('article.urls')),
     re_path(r"^list/(?P<year>\d{4})/$", relist),
     re_path(r'.*', blackhole)
 ]
