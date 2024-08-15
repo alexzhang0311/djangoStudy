@@ -14,10 +14,10 @@ def book(request):
     if request.GET.get("user") == 'alexzhang':
         return HttpResponse("您好:{}\r\n您目前访问的是图书首页".format(request.GET.get("user")))
     else:
-        #return redirect('login/')
-        # return redirect(reverse('book:sso'))
+        #return redirect('login/1')
+        #return redirect(reverse('book:sso', kwargs={"book_id":1}))
         current_namespace = request.resolver_match.namespace
-        # return redirect(reverse('{}:sso'.format(current_namespace), kwargs={"book_id":1}))
+        #return redirect(reverse('{}:sso'.format(current_namespace), kwargs={"book_id":1}))
         login_url = reverse('{}:sso'.format(current_namespace),kwargs={"book_id":1}) + "?next=/"
         return redirect(login_url)
 

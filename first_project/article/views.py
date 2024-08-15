@@ -14,4 +14,4 @@ def article_list(request, categories):
 def article_login(request):
     # text = reverse('article:cate',kwargs={"categories":"django+alex"})
     text = reverse('article:cate',kwargs={"categories":['django','alex']})
-    return redirect(text)
+    return redirect(text)   

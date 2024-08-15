@@ -11,5 +11,11 @@
     <p>汽车品牌：{{ car.brand }}</p>
     <p>爱好1：{{ hobbies.0 }}</p>
     <p>爱好2：{{ hobbies.1 }}</p>
+
+    {% if username == "alexzhang" %}
+        <p>你好，张弛！</p>
+    {% else %}
+        <p>你好，涵涵！</p>
+    {% endif %} 
 </body>
 </html>
