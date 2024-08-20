@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKS</title>
+</head>
+<body>
+    <p>书籍是人类进步的阶梯</p>
+    <ul>
+        {% for book in books reversed%}
+            <li>{{ book }}</li>
+        {% endfor %}
+    </ul>
+<!-- 
+    {% for key,value in person.items%}
+        <div>{{key}}:{{value}} 循环次数：{{forloop.counter}}</div>
+    {% endfor %} -->
+
+    <table>
+        <thead>
+            <tr>
+                <td>编号</td>
+                <td>姓名</td>
+                <td>年龄</td>
+                <td>性别</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in persons%}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{person.name}}</td>
+                    <td>{{person.age}}</td>
+                    <td>{{person.gender}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    
+</body>
+</html>

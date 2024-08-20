@@ -19,7 +19,37 @@ def movie(request):
             "car": {"color": "red", "brand": "Benz"},
             "hobbies": ["basketball", "football"]
             }
-    return render(request, 'index.html', context=data)
+    context = {
+        "books":[
+            "水浒传",
+            "三国演义",
+            "红楼梦",
+            "西游记",
+            ],
+        "persons":[
+            {
+            "name":"alexzhang",
+            "gender":"Male",
+            "age":"31"
+            },
+            {
+            "name":"IrisYang",
+            "gender":"Female",
+            "age":"32"
+            },
+            {
+            "name":"TimFeng",
+            "gender":"Male",
+            "age":"32"
+            },
+            {
+            "name":"SihuiHa",
+            "gender":"FeMale",
+            "age":"32"
+            }
+        ]
+    }
+    return render(request, 'books.html', context=context)
 
 
 def movie_login(request):
