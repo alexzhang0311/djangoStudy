@@ -54,3 +54,6 @@ def movie(request):
 
 def movie_login(request):
     return HttpResponse("电影登录页")
+
+def movie_highlight(request, id):
+    return HttpResponse("最热电影ID:{}".format(id))

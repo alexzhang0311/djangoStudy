@@ -5,8 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOOKS</title>
+    <style>
+        .nav{
+            overflow: hidden;
+            margin: 0;
+            background-color: gray;
+        }
+
+        .nav li{
+            float: left;
+            list-style: none;
+            margin: 0 20px;
+        }
+    </style>
 </head>
 <body>
+    <ul class="nav">
+        <li><a href="/">首页</a></li>
+        <li><a href="/book1/?user=alexzhang">读书</a></li>
+        <li><a href="{% url 'movie:sso' %}">电影</a></li>
+        <li><a href="/article/login/">文章</a></li>
+        <li><a href="{% url 'article:login' %}?next=/">书籍首页</a></li>
+        <!-- <li><a href="{% url 'article:cate' categories='django+alex' %}">书籍ID</a></li> -->
+        <li><a href="{% url 'movie:high' id='2' %}">最热电影</a></li>
+        <li><a href="{% url 'article:high' id='2' name='张弛'%}">最热书籍</a></li>
+    </ul>
     <p>书籍是人类进步的阶梯</p>
     <ul>
         {% for book in books reversed%}
@@ -29,7 +52,13 @@
         </thead>
         <tbody>
             {% for person in persons%}
-                <tr>
+                {% if forloop.first %}
+                    <tr style="background-color: yellow;">
+                {% elif forloop.last %}
+                    <tr style="background-color: pink;">
+                {% else %}
+                    <tr style="background-color: blue;">
+                {% endif %}
                     <td>{{forloop.counter}}</td>
                     <td>{{person.name}}</td>
                     <td>{{person.age}}</td>
@@ -38,6 +67,15 @@
             {% endfor %}
         </tbody>
     </table>
+
+    <!-- with 标签，定义dtl中的变量 -->
+    {% with shz=books.0 %}
+        <p>{{ shz }}</p>
+    {% endwith %}
+    
+    {% with books.3 as xyj %}
+        <p>{{ xyj }}</p>
+    {% endwith %}
     
     
 </body>

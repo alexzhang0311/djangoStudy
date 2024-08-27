@@ -8,6 +8,7 @@ class CategoryConverter(object):
         return text
 
     def to_url(self, value):
+        # return value
         if isinstance(value,list):
             text = "+".join(value)
             return text

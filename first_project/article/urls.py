@@ -8,7 +8,8 @@ app_name = "article"
 
 urlpatterns = [
     path('', views.index),
-    path('login/', views.article_login),
+    path('login/', views.article_login,name='login'),
+    path('high/<id>/<name>/', views.article_highlight,name='high'),
     # re_path(r'.*list/(?P<categories>\w+|(\w+\+\w+)+)/', views.article_list, name='cate')
     path('list/<cate:categories>/', views.article_list, name='cate')
 ]
