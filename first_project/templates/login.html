@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h2>登录表单</h2>
+    <form action="{% url 'login:submit_form' %}" method="post">
+        {% csrf_token %}
+        <label for="username">账号:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">密码:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input type="hidden" name="next" value="{{ next }}">
+        
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

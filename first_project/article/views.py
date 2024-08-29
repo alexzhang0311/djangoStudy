@@ -19,3 +19,8 @@ def article_login(request):
     # text = reverse('article:cate',kwargs={"categories":"django+alex"})
     text = reverse('article:cate',kwargs={"categories":['django','alex']}) 
     return redirect(text)   
+
+def redir(request):
+    dir = request.GET.get("next")
+    print(dir)
+    return redirect(dir)

@@ -47,7 +47,8 @@ def movie(request):
             "gender":"FeMale",
             "age":"32"
             }
-        ]
+        ],
+        "info":"<a href='/'>首页</a>"
     }
     return render(request, 'books.html', context=context)
 

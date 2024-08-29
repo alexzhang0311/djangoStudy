@@ -25,8 +25,9 @@
         <li><a href="/book1/?user=alexzhang">读书</a></li>
         <li><a href="{% url 'movie:sso' %}">电影</a></li>
         <li><a href="/article/login/">文章</a></li>
-        <li><a href="{% url 'article:login' %}?next=/">书籍首页</a></li>
-        <!-- <li><a href="{% url 'article:cate' categories='django+alex' %}">书籍ID</a></li> -->
+        {% with 'https://tinysoftgiraffe.top/' as site %}
+        <li><a href="{% url 'article:redirect' %}?next={{ site }}">外部重定向</a></li>
+        {% endwith %}
         <li><a href="{% url 'movie:high' id='2' %}">最热电影</a></li>
         <li><a href="{% url 'article:high' id='2' name='张弛'%}">最热书籍</a></li>
     </ul>
@@ -77,6 +78,19 @@
         <p>{{ xyj }}</p>
     {% endwith %}
     
+    {% spaceless %}
+        <p>
+            <a href="/movie/login/">移除空格标签</a>
+        </p>
+    {% endspaceless %}
+    
+    {% autoescape off %}
+    {{ info }}
+    {% endautoescape %}
+    <div><a href='/'>首页</a></div>
+    {% verbatim %}
+        {{ if }} {% the handsome boy %} is alexzhang
+    {% endverbatim %}
     
 </body>
 </html>

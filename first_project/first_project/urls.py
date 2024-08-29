@@ -38,6 +38,7 @@ urlpatterns = [
     path('book1/', include('book.urls', namespace='book1')),
     path('book2/', include('book.urls', namespace='book2')),
     path('article/', include('article.urls')),
+    path('login/',include('login.urls')),
     re_path(r"^list/(?P<year>\d{4})/$", relist),
     re_path(r'.*', blackhole)
 ]
