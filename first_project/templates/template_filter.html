@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模板过滤器</title>
+</head>
+<body>
+    <p>模板过滤器</p>
+    <div>{{ 1|add:4}}</div>
+    {{ value1|add:value2 }}
+    <div>{{ "hello,world"|cut:"," }}</div>
+    <div>{{ time|date:"Y-m-d H:i:s" }}</div>
+    <div>{{ default|default:"我是默认值" }}</div>
+    <div>{{ default_0 }} {{ default_0|default:"空字符，空数组，空字典才会显示" }}</div>
+    <div>{{ default_1 }} {{ default_1|default_if_none:"只有值是None才会显示" }}</div>
+    <div>{{ value1|last }} 最后一个元素</div> 
+    <div>{{ value1|first }} 第一个元素</div>
+    <div>{{ "hello"|first }} 第一个元素</div>
+    <div>{{ floatValue|floatformat }} 对浮点数进行四舍五入，一位小数</div>
+    <div>{{ floatValue|floatformat:3 }} 对浮点数进行四舍五入，三位小数</div>
+
+</body>
+</html>
