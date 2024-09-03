@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>模板过滤器</title>
+    {{ script|safe }}
 </head>
 <body>
     <p>模板过滤器</p>
@@ -20,6 +21,19 @@
     <div>{{ "hello"|first }} 第一个元素</div>
     <div>{{ floatValue|floatformat }} 对浮点数进行四舍五入，一位小数</div>
     <div>{{ floatValue|floatformat:3 }} 对浮点数进行四舍五入，三位小数</div>
+    <div>{{ floatValue|floatformat:3 }} 对浮点数进行四舍五入，三位小数</div>
+    <div>{{ value1|join:"|" }} 对数组以一个特定的分隔符进行连接</div>
+    <div>{{ value1|slice:"::-1"}} 对数组进行切片操作</div>
+    <div>{{ value1|length }} 对数组,字符串求长度</div>
+    <div>{{ value1|random }} 数组中随机获取一个值</div>
+    <div>{{ default|upper }} 对字符串全部转大写</div>
+    <div>{{ default|lower }} 对字符串全部转小写</div>
+    <div> {{ alert | safe}} </div>
+    <div> {{ alert | striptags}} 清除html标签</div>
+    <div> {{ truncate | truncatechars:"6"}} 切割字符串(n-1)个字符加3个点</div>
+    <div> {{ default | truncatechars:"4"}} 切割字符串</div>
+    <div> {{ truncate_html | truncatechars_html:"3"}} 切割字符串,保留HTML标签</div>
+    
 
 </body>
 </html>
