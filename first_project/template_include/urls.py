@@ -4,6 +4,6 @@ from . import views
 app_name = "template_include"
 urlpatterns = [
     path('',views.index,name="index"),
-    path('company/',views.index,name="company"),
-    path('campus/',views.index,name="campus"),
+    path('company/',views.company,name="company"),
+    path('campus/',views.campus,name="campus"),
 ]
