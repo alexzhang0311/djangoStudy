@@ -14,6 +14,7 @@ def index(request):
         "script":"<script> function showAlert(message) { alert(message);}</script>",
         "alert":"<button onclick=\"showAlert('safe过滤器测试')\">点我</button>",
         "truncate":"创世纪滨海花园",
-        "truncate_html":"<p>模板过滤器</p>"
+        "truncate_html":"<p>模板过滤器</p>",
+        "date":datetime.now()
     }
     return render(request, "template_filter.html",context=data)
