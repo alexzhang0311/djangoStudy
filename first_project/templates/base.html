@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Include</title>
+    <style>
+        header {
+            display: flex;
+            justify-content: center; /* 水平居中对齐 */
+        }
+
+        .nav {
+            overflow: hidden;
+        }
+
+        .nav li {
+            float: left;
+            list-style: none;
+            margin: 0 20px;
+        }
+
+        footer {
+            background-color: #ccc;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <ul class="nav">
+            <li><a href="{% url 'template_include:index' %}">首页</a></li>
+            <li><a href="{% url 'template_include:company' %}">公司</a></li>
+            <li><a href="{% url 'template_include:campus' %}">校园</a></li>
+            <li><a href="#">{{ username }}</a></li>
+        </ul>
+    </header>
+    
+    <div class="main">
+        {% block content %}
+        <div>这里是父模板的代码</div>
+        {% endblock %}
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            这是页尾部分
+        </div>
+    </footer>
+
+</body>
+</html>
