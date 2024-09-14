@@ -1,0 +1,15 @@
+{% extends 'db_base.html' %}
+
+{% block content %}
+    <!-- action为空代表提交到当前的url中 -->
+    <form action="" method="post" class="form"> 
+        {% csrf_token %}
+        <label for="bookname">书名:</label>
+        <input type="text" id="booknameid" name="bookname" required><br>
+        
+        <label for="password">作者:</label>
+        <input type="text" id="authorid" name="author" required><br>
+        
+        <input type="submit" value="提交">
+    </form>
+{% endblock %}

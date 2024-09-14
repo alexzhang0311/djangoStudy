@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'template_filter',
-    'template_static'
+    'template_static',
+    'db_operation'
 ]
 
 MIDDLEWARE = [
@@ -78,8 +79,12 @@ WSGI_APPLICATION = 'first_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'alex',
+        'USER':"app",
+        "PASSWORD":"Zc@2328980",
+        "HOST":"120.78.208.110",
+        "PORT":"3306"
     }
 }
 

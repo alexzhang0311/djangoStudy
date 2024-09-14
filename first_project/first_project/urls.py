@@ -40,6 +40,7 @@ urlpatterns = [
     path('template/',include('template_filter.urls')),
     path('template_include/',include('template_include.urls')),
     path('template_static/',include('template_static.urls')),
+    path('db/',include('db_operation.urls')),
     re_path(r"^list/(?P<year>\d{4})/$", relist),
     re_path(r'.*', blackhole)
 ]

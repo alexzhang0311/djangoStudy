@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.nav {
+    background-color: #3a3a3a;
+    color: white;
+    overflow: hidden;
+    
+}
+.nav li {
+    float: left;
+    margin: 0 40px;
+    padding: 20px;
+    list-style: none;
+}
+
+.nav li a {
+    text-decoration: none; /* 取消a标签下划线 */
+    color: inherit;
+}
+
+.nav li a:hover {
+    color: lightblue;
+}
+
+table {
+    margin-top: 30px;
+    border-collapse: collapse; /* 合并边框 */
+    border-spacing: 0; /* 表格间距 */
+    border: 1px solid #ccc; /* 表格边框 */
+    width: 30%;
+    text-align: center; /* 单元格居中 */
+    border: 1px solid #ccc; /* 表格边框 */
+}
+
+table thead{
+    background-color: gray; /* 表头背景色 */
+    font-weight: bold; /* 表头加粗 */
+    text-align: center; /* 表头居中 */
+    border: 1px solid #ccc; /* 表头边框 */
+}
+
+table td{
+    padding: 8px; /* 单元格内边距 */
+    text-align: center; /* 单元格居中 */
+    border: 1px solid #ccc; /* 单元格边框 */
+}
+
+.form {
+    margin-top: 30px;
+    margin-left: 20px;
+}

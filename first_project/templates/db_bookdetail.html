@@ -1,0 +1,24 @@
+{% extends 'db_base.html' %}
+
+{% block content %}
+    <p>书名: {{ books.1 }}</p>
+    <p>作者: {{ books.2 }}</p>
+    <div style="overflow: hidden;">
+        <form action="{% url 'db:bookdelete' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" id="bookid" name="bookid" value="{{ books.0 }}" required><br>
+            <input type="submit" value="删除图书">
+        </form>
+        <br><br>
+        <form action="{% url 'db:bookupdate' %}" method="post" >
+            {% csrf_token %}
+            <input type="hidden" id="bookid" name="bookid" value="{{ books.0 }}" required>
+            <label for="bookname">书名:</label>
+            <input type="text" id="booknameid" name="bookname" required><br><br>
+            
+            <label for="password">作者:</label>
+            <input type="text" id="authorid" name="author" required><br><br>
+            <button type="submit">更新图书</button>
+        </form>
+    </div>
+{% endblock %}

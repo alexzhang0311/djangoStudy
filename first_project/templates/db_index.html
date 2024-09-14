@@ -1,0 +1,23 @@
+{% extends 'db_base.html' %}
+
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <td>编号</td>
+                <td>书名</td>
+                <td>作者</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in books%}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td><a href="{% url 'db:bookdetail' bookid=book.0 %}">{{book.1}}</a></td>
+                <td>{{book.2}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
