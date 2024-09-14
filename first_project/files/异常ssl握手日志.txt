@@ -1,0 +1,132 @@
+#客户端使用HTTPS协议访问了一个NGINX服务器，连接的端口号为9022。
+2024-08-03 14:45:41,852 DEBUG frontTaskExecutor-4 MainClientExec.execute(MainClientExec.java:235) - Opening connection {s}->https://172.17.5.9:9022
+2024-08-03 14:45:41,852 DEBUG frontTaskExecutor-4 DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:139) - Connecting to /172.17.5.9:9022
+2024-08-03 14:45:41,852 DEBUG frontTaskExecutor-4 SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:337) - Connecting socket to /172.17.5.9:9022 with timeout 2000
+#客户端连接到服务器的IP地址为172.17.5.9，连接过程中使用了SSL/TLS协议进行加密通信。
+#客户端与服务器进行握手，服务器返回了支持的协议版本和密码套件，协商完成后开始进行加密通信。
+2024-08-03 14:45:41,855 DEBUG frontTaskExecutor-4 SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:390) - Enabled protocols: [TLSv1]
+2024-08-03 14:45:41,855 DEBUG frontTaskExecutor-4 SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:391) - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+2024-08-03 14:45:41,855 DEBUG frontTaskExecutor-4 SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:395) - Starting handshake
+2024-08-03 14:45:41,923 DEBUG frontTaskExecutor-4 SSLConnectionSocketFactory.verifyHostname(SSLConnectionSocketFactory.java:425) - Secure session established
+2024-08-03 14:45:41,923 DEBUG frontTaskExecutor-4 SSLConnectionSocketFactory.verifyHostname(SSLConnectionSocketFactory.java:426) -  negotiated protocol: TLSv1
+2024-08-03 14:45:41,924 DEBUG frontTaskExecutor-4 SSLConnectionSocketFactory.verifyHostname(SSLConnectionSocketFactory.java:427) -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+2024-08-03 14:45:41,924 DEBUG frontTaskExecutor-4 SSLConnectionSocketFactory.verifyHostname(SSLConnectionSocketFactory.java:435) -  peer principal: CN=10.106.89.231, OU=IT-Dept., O="WeBank Co., Ltd.", ST=Guangdong, C=CN
+2024-08-03 14:45:41,924 DEBUG frontTaskExecutor-4 SSLConnectionSocketFactory.verifyHostname(SSLConnectionSocketFactory.java:448) -  issuer principal: C=CN, L=Shenzhen, O="WeBank Co., Ltd.", CN=WeBank-ChinaTelecom CA
+2024-08-03 14:45:41,924 DEBUG frontTaskExecutor-4 DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:146) - Connection established 172.17.5.80:18636<->172.17.5.9:9022
+2024-08-03 14:45:41,924 DEBUG frontTaskExecutor-4 DefaultManagedHttpClientConnection.setSocketTimeout(LoggingManagedHttpClientConnection.java:88) - http-outgoing-3: set socket timeout to 4000
+#客户端向服务器发送了一个POST请求，请求的URL为/pmbank-cidaac/getprompt?bizSeqNo=24061720017179425515324900000895。
+2024-08-03 14:45:41,926 DEBUG frontTaskExecutor-4 MainClientExec.execute(MainClientExec.java:256) - Executing request POST /pmbank-cidaac/getprompt?bizSeqNo=24061720017179425515324900000895 HTTP/1.1
+2024-08-03 14:45:41,926 DEBUG frontTaskExecutor-4 MainClientExec.execute(MainClientExec.java:261) - Target auth state: UNCHALLENGED
+2024-08-03 14:45:41,926 DEBUG frontTaskExecutor-4 MainClientExec.execute(MainClientExec.java:267) - Proxy auth state: UNCHALLENGED
+#客户端向服务器发送了请求头部信息，包括Content-Type、Content-Length、Host、Connection、User-Agent和Accept-Encoding等。
+2024-08-03 14:45:41,926 DEBUG frontTaskExecutor-4 headers.onRequestSubmitted(LoggingManagedHttpClientConnection.java:133) - http-outgoing-3 >> POST /pmbank-cidaac/getprompt?bizSeqNo=24061720017179425515324900000895 HTTP/1.1
+2024-08-03 14:45:41,926 DEBUG frontTaskExecutor-4 headers.onRequestSubmitted(LoggingManagedHttpClientConnection.java:136) - http-outgoing-3 >> Content-Type: application/json;charset=utf-8
+2024-08-03 14:45:41,926 DEBUG frontTaskExecutor-4 headers.onRequestSubmitted(LoggingManagedHttpClientConnection.java:136) - http-outgoing-3 >> Content-Length: 331
+2024-08-03 14:45:41,926 DEBUG frontTaskExecutor-4 headers.onRequestSubmitted(LoggingManagedHttpClientConnection.java:136) - http-outgoing-3 >> Host: 172.17.5.9:9022
+2024-08-03 14:45:41,926 DEBUG frontTaskExecutor-4 headers.onRequestSubmitted(LoggingManagedHttpClientConnection.java:136) - http-outgoing-3 >> Connection: Keep-Alive
+2024-08-03 14:45:41,926 DEBUG frontTaskExecutor-4 headers.onRequestSubmitted(LoggingManagedHttpClientConnection.java:136) - http-outgoing-3 >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_141)
+2024-08-03 14:45:41,926 DEBUG frontTaskExecutor-4 headers.onRequestSubmitted(LoggingManagedHttpClientConnection.java:136) - http-outgoing-3 >> Accept-Encoding: gzip,deflate
+2024-08-03 14:45:41,926 DEBUG frontTaskExecutor-4 wire.wire(Wire.java:73) - http-outgoing-3 >> "POST /pmbank-cidaac/getprompt?bizSeqNo=24061720017179425515324900000895 HTTP/1.1[\r][\n]"
+2024-08-03 14:45:41,927 DEBUG frontTaskExecutor-4 wire.wire(Wire.java:73) - http-outgoing-3 >> "Content-Type: application/json;charset=utf-8[\r][\n]"
+2024-08-03 14:45:41,927 DEBUG frontTaskExecutor-4 wire.wire(Wire.java:73) - http-outgoing-3 >> "Content-Length: 331[\r][\n]"
+2024-08-03 14:45:41,927 DEBUG frontTaskExecutor-4 wire.wire(Wire.java:73) - http-outgoing-3 >> "Host: 172.17.5.9:9022[\r][\n]"
+2024-08-03 14:45:41,927 DEBUG frontTaskExecutor-4 wire.wire(Wire.java:73) - http-outgoing-3 >> "Connection: Keep-Alive[\r][\n]"
+2024-08-03 14:45:41,927 DEBUG frontTaskExecutor-4 wire.wire(Wire.java:73) - http-outgoing-3 >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_141)[\r][\n]"
+2024-08-03 14:45:41,927 DEBUG frontTaskExecutor-4 wire.wire(Wire.java:73) - http-outgoing-3 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2024-08-03 14:45:41,927 DEBUG frontTaskExecutor-4 wire.wire(Wire.java:73) - http-outgoing-3 >> "[\r][\n]"
+#客户端向服务器发送了请求体信息，包括sysId、sysKey、bizSeqNo、tranTimestamp、appId、bizType和messages等
+2024-08-03 14:45:41,928 DEBUG frontTaskExecutor-4 wire.wire(Wire.java:87) - http-outgoing-3 >> "{"sysId":"idap_idasc","sysKey":"App1234.","bizSeqNo":"24061720017179425515324900000895","tranTimestamp":1722667541842,"appId":"IDA0ZbaV","bizType":"sj-de-intention","messages":[{"role":"system","content":"[0xe6][0x9c][0x89][0xe4][0xb8][0xaa][0xe5][0x8a][0x9e][0xe7][0x90][0x86][0xe4][0xb8][0x9a][0xe5][0x8a][0xa1][0xe8][0xaf][0xb7][0xe5][0x9b][0x9e][0xe7][0xad][0x94][0xe6][0x98][0xaf][0xe7][0x9a][0x84]"},{"role":"reference","content":"[0xe6][0x98][0xaf][0xe7][0x9a][0x84]|[0xe5][0xa5][0xbd][0xe7][0x9a][0x84]|[0xe5][0x8f][0xaf][0xe4][0xbb][0xa5]"},{"role":"user","content":"[0xe6][0x98][0xaf][0xe6][0x88][0x91]"}]}"
+#服务器接收到请求并返回响应，但在返回响应的过程中出现了"bad record MAC"的错误。
+2024-08-03 14:45:42,039 DEBUG frontTaskExecutor-4 wire.wire(Wire.java:87) - http-outgoing-3 << "[read] I/O error: bad record MAC"
+2024-08-03 14:45:42,039 DEBUG frontTaskExecutor-4 DefaultManagedHttpClientConnection.close(LoggingManagedHttpClientConnection.java:79) - http-outgoing-3: Close connection
+2024-08-03 14:45:42,039 DEBUG frontTaskExecutor-4 DefaultManagedHttpClientConnection.shutdown(LoggingManagedHttpClientConnection.java:96) - http-outgoing-3: Shutdown connection
+2024-08-03 14:45:42,039 DEBUG frontTaskExecutor-4 MainClientExec.abortConnection(ConnectionHolder.java:129) - Connection discarded
+2024-08-03 14:45:42,039 DEBUG frontTaskExecutor-4 PoolingHttpClientConnectionManager.releaseConnection(PoolingHttpClientConnectionManager.java:348) - Connection released: [id: 3][route: {s}->https://172.17.5.9:9022][total kept alive: 0; route allocated: 0 of 5; total allocated: 0 of 200]
+2024-08-03 14:45:42,040 DEBUG frontTaskExecutor-4 PoolingHttpClientConnectionManager.shutdown(PoolingHttpClientConnectionManager.java:408) - Connection manager is shutting down
+2024-08-03 14:45:42,040 DEBUG frontTaskExecutor-4 PoolingHttpClientConnectionManager.shutdown(PoolingHttpClientConnectionManager.java:414) - Connection manager shut down
+由于出现了错误，服务器关闭了连接，客户端无法继续与服务器进行通信。
+
+2024-08-03 14:45:42,042 DEBUG frontTaskExecutor-4 ReloadableResourceBundleMessageSource.refreshProperties(ReloadableResourceBundleMessageSource.java:456) - No properties file found for [classpath:messages_en_US] - neither plain properties nor XML
+2024-08-03 14:45:42,042 DEBUG frontTaskExecutor-4 ReloadableResourceBundleMessageSource.refreshProperties(ReloadableResourceBundleMessageSource.java:456) - No properties file found for [classpath:messages_en] - neither plain properties nor XML
+2024-08-03 14:45:42,043 DEBUG frontTaskExecutor-4 ReloadableResourceBundleMessageSource.loadProperties(ReloadableResourceBundleMessageSource.java:494) - Loading properties [messages.properties] with encoding 'UTF-8'
+2024-08-03 14:45:42,043 DEBUG frontTaskExecutor-4 WebAsyncManager.setConcurrentResultAndDispatch(WebAsyncManager.java:407) - Async result set to: cn.webank.idap.idiac.thirdparty.common.dto.AIPromptOutDTO@553edf63[code=999999,msg=服务内部错误,data=<null>,code=0,msg=请求成功,bizSeqNo=24080320001191400114454100000004,debugMsg=retCode=999999,retMsg=服务内部错误] for "/idap-idiactool/pmbank/getprompt"
+2024-08-03 14:45:42,043 DEBUG frontTaskExecutor-4 WebAsyncManager.setConcurrentResultAndDispatch(WebAsyncManager.java:418) - Performing async dispatch for "/idap-idiactool/pmbank/getprompt"
+2024-08-03 14:45:42,044 DEBUG http-nio2-0.0.0.0-10039-exec-7 DispatcherServlet.traceDebug(LogFormatUtils.java:120) - "ASYNC" dispatch for POST "/idap-idiactool/pmbank/getprompt", parameters={}
+2024-08-03 14:45:42,045 DEBUG http-nio2-0.0.0.0-10039-exec-7 RequestMappingHandlerAdapter.traceDebug(LogFormatUtils.java:120) - Resume with async result [cn.webank.idap.idiac.thirdparty.common.dto.AIPromptOutDTO@553edf63[code=999999,msg=服务内部错误,data=<null (truncated)...]
+2024-08-03 14:45:42,046 DEBUG http-nio2-0.0.0.0-10039-exec-7 RequestResponseBodyMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:268) - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json, application/xml;charset=UTF-8, text/xml;charset=UTF-8, application/*+xml;charset=UTF-8, application/xml;charset=UTF-8, text/xml;charset=UTF-8, application/*+xml;charset=UTF-8]
+2024-08-03 14:45:42,046 DEBUG http-nio2-0.0.0.0-10039-exec-7 RequestResponseBodyMethodProcessor.traceDebug(LogFormatUtils.java:120) - Writing [cn.webank.idap.idiac.thirdparty.common.dto.AIPromptOutDTO@553edf63[code=999999,msg=服务内部错误,data=<null (truncated)...]
+2024-08-03 14:45:42,040 ERROR frontTaskExecutor-4 PmbankController.lambda$getprompt$0(PmbankController.java:59) - PmbankController.getprompt error:24061720017179425515324900000895
+cn.webank.mumble.framework.common.exception.SysException: sys exception; nested exception is javax.net.ssl.SSLException: bad record MAC
+        at cn.webank.idap.idiac.http.HttpSend.commonPostSend(HttpSend.java:56) ~[idap-idiactool-1.0.0.jar:1.0.0]
+        at cn.webank.idap.idiac.http.RestfulHttpSAO.sendHttpsPostRequest(RestfulHttpSAO.java:87) ~[idap-idiactool-1.0.0.jar:1.0.0]
+        at cn.webank.idap.idiac.thirdparty.integration.sao.impl.PmbankSAOImpl.getPrompt(PmbankSAOImpl.java:49) ~[idap-idiactool-1.0.0.jar:1.0.0]
+        at cn.webank.idap.idiac.thirdparty.integration.sao.impl.PmbankSAOImpl$FastClassBySpringCGLIB$7b86478f.invoke(<generated>) ~[idap-idiactool-1.0.0.jar:1.0.0]
+        at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.34.jar:5.3.34]
+        at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792) ~[spring-aop-5.3.34.jar:5.3.34]
+        at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.34.jar:5.3.34]
+        at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762) ~[spring-aop-5.3.34.jar:5.3.34]
+        at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.34.jar:5.3.34]
+        at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.34.jar:5.3.34]
+        at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762) ~[spring-aop-5.3.34.jar:5.3.34]
+        at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707) ~[spring-aop-5.3.34.jar:5.3.34]
+        at cn.webank.idap.idiac.thirdparty.integration.sao.impl.PmbankSAOImpl$EnhancerBySpringCGLIB$1bb308af.getPrompt(<generated>) ~[idap-idiactool-1.0.0.jar:1.0.0]
+        at cn.webank.idap.idiac.thirdparty.service.impl.PmbankServiceImpl.getPrompt(PmbankServiceImpl.java:51) ~[idap-idiactool-1.0.0.jar:1.0.0]
+        at cn.webank.idap.idiac.thirdparty.web.controller.PmbankController.lambda$getprompt$0(PmbankController.java:57) ~[idap-idiactool-1.0.0.jar:1.0.0]
+        at cn.webank.mumble.framework.web.controller.MumbleAbstractBaseController$DeferredResultRunnable.run(MumbleAbstractBaseController.java:796) ~[mumble-sdk-web-3.3.0.jar:3.3.0]
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_141]
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_141]
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[?:1.8.0_141]
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[?:1.8.0_141]
+        at java.lang.Thread.run(Thread.java:748) [?:1.8.0_141]
+Caused by: javax.net.ssl.SSLException: bad record MAC
+        at sun.security.ssl.Alerts.getSSLException(Alerts.java:208) ~[?:1.8.0_141]
+        at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1959) ~[?:1.8.0_141]
+        at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1030) ~[?:1.8.0_141]
+        at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:940) ~[?:1.8.0_141]
+        at sun.security.ssl.AppInputStream.read(AppInputStream.java:105) ~[?:1.8.0_141]
+        at org.apache.http.impl.conn.LoggingInputStream.read(LoggingInputStream.java:84) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:282) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108) ~[http-client-1.1.5.2.jar:?]
+        at cn.webank.idap.idiac.http.HttpSend.commonPostSend(HttpSend.java:50) ~[idap-idiactool-1.0.0.jar:1.0.0]
+        ... 20 more
+Caused by: javax.crypto.BadPaddingException: bad record MAC
+        at sun.security.ssl.InputRecord.decrypt(InputRecord.java:219) ~[?:1.8.0_141]
+        at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1025) ~[?:1.8.0_141]
+        at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:940) ~[?:1.8.0_141]
+        at sun.security.ssl.AppInputStream.read(AppInputStream.java:105) ~[?:1.8.0_141]
+        at org.apache.http.impl.conn.LoggingInputStream.read(LoggingInputStream.java:84) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:282) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[http-client-1.1.5.2.jar:?]
+        at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108) ~[http-client-1.1.5.2.jar:?]
+        at cn.webank.idap.idiac.http.HttpSend.commonPostSend(HttpSend.java:50) ~[idap-idiactool-1.0.0.jar:1.0.0]
+        ... 20 more
+2024-08-03 14:45:42,046 DEBUG http-nio2-0.0.0.0-10039-exec-7 DispatcherServlet.logResult(FrameworkServlet.java:1127) - Exiting from "ASYNC" dispatch, status 200

@@ -5,7 +5,7 @@ from movie import views
 app_name = "movie"
 
 urlpatterns = [
-    path('', views.movie),
+    path('', views.movie,name='index'),
     path('login/', views.movie_login, name='sso'),
     path('high/<id>/', views.movie_highlight, name='high')
 ]

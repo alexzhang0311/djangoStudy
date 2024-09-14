@@ -1,0 +1,508 @@
+{
+  "name": "WbGradeInfo",
+  "version": "1.2.4",
+  "signature": "LgHp87WthD65OE2oB9UHz31BGo8XVYHMWNs2rU3ffyb5mDTv3nZJduPgWGbjnVbitMUx6yTt/nzjwzNhGOyPdOIqkHxVFYW1od0X/4pI4nbJSax3E2dgoDgijT5LY+EHqmN/y9f8LMyH5K1dym7sihpUvISqtxqL0dMVU2x11pGWGlTdJX1LXnA0ey3cixgzIMBAMu7KGju9uEZcXDg+dsqVMpUueiN0F3rgkygxYkclBCxsqXA1pllHzPh5P3d1BvMtU7Y+YgUho3sSLv12r+j0zDGvxgAtqKerESuS8H747EFRUxFDMZgJeI7E4jUvtVrP8Jire9xqzQzHa4m/Vg==",
+  "outOfTime": "30000",
+  "turingTime": "5000",
+  "recordTime": "1000",
+  "authBackVisibleTime": "6000",
+  "verifyBackVisibleTime": "6000",
+  "dialogType": "2",
+  "authStyle": "1",
+  "authType": "1",
+  "isDetectCloseEye": "1",
+  "encodeOutOfTime": "1000",
+  "useTuringSDK_iOS": "1",
+  "useTuringSDK_and": "1",
+  "iosBanTuringVerison": [],
+  "androidBanTuringVersion": [],
+  "iosBanTuringList": [],
+  "androidBanTurdingList": [
+    "SM-N9008V"
+  ],
+  "androidBanTuringList": [
+    "SM-N9008V"
+  ],
+  "skipGuideTipVoice": "1",
+  "recordYTVideo": "0",
+  "uploadYTVideo": "1",
+  "enterDetectWaitTime": "150",
+  "ytVideoValidFrames": "10",
+  "previewVoiceTime": "1600",
+  "actCheckNextTime": "150",
+  "isCamCanRetry": "0",
+  "camTokenWaitTime": "500",
+  "gradeTimeoutInterval": "12000",
+  "gradeRetryCount": "3",
+  "gradeQueryInterval": "4000",
+  "willVideoTimeoutInterval": "20000",
+  "returnUserImage": "0",
+  "isGm": "1",
+  "captureDepth": "1",
+  "kyc_auth_tip_use_cam_mic_reason": "用于拍摄人脸照片、录制朗读音频",
+  "kyc_auth_tip_use_cam_reason": "用于拍摄人脸照片",
+  "kyc_auth_tip_know_and_agree": "您知悉并同意应用提供者：",
+  "kyc_auth_tip_line1": "收集、使用您本人的身份信息和人脸图像",
+  "kyc_auth_tip_line2": "向合法数据持有者核实您的身份信息",
+  "kyc_auth_tip_line3": "本操作数据仅用于身份核实，安全可靠",
+  "kyc_auth_tip_read_and_agree": "上述为个人敏感信息，您知悉并同意《个人信息授权协议》，如拒绝，将无法使用本功能。",
+  "kyc_auth_tip_user_auth": "查看协议",
+  "kyc_auth_tip_refuse_no_use": "",
+  "kyc_auth_popup_tip": "请勾选授权协议",
+  "kyc_dialog_title": "确认退出？",
+  "kyc_dialog_text": "亲，再等1秒即可完成",
+  "kyc_dialog_yes": "确定",
+  "kyc_dialog_no": "取消",
+  "willFaceOutCount":"1",
+  "willPoseCount":"10",
+  "isWillCheckShielding":"0",
+  "will_service_play_no_volume_tip": "播报音频中，请勿静音",
+  "will_service_answer_no_volume_tip": "亲，语音回答时请大声一点",
+  "willVideoBitRateFactor": "2.1",
+  "willReadSpeed": "3",
+  "willReadExtraTime": "3000",
+  "willAsrTimeoutInterval": "10000",
+  "willAsrTimeoutRetryCount": "2",
+  "willAsrNetworkTip": "网络不太好，请稍等一下",
+  "willAsrShowNetworkTipTime": "1500",
+  "willAsrAnswerRetryCount": "2",
+  "willAsrErrorTip": "回答不正确，请重试",
+  "willAsrShowErrorTipTime": "1500",
+  "will_service_play_audio_lowest_volume": "0",
+  "will_pass_play_volume_check": "0",
+  "will_screenshot": "1",
+  "will_service_screenshot_time": "0.3",
+  "will_service_volume_turnup_level": "0.7",
+  "will_service_play_mode_wait_time_and": "300",
+  "will_service_volume_detect_minlevel_and": "0",
+  "will_service_volume_detect_minlevel_ios": "0",
+  "will_service_volume_detect_waittime": "1500",
+  "will_service_mute_timeout": "3000",
+  "willUploadTimeoutInterval": "15000",
+  "iosEyeOpenRate": "0.2",
+  "iosLightScore": "1000",
+  "iosFaceAreaMin": "0.1",
+  "iosFaceAreaMax": "0.5",
+  "iosFaceYawMin": "-25",
+  "iosFaceYawMax": "25",
+  "iosFacePitchMin": "-25",
+  "iosFacePitchMax": "25",
+  "iosFaceRollMin": "-20",
+  "iosFaceRollMax": "20",
+  "iosFacePointsVis": "0.8",
+  "iosFacePointsPercent": "0.4",
+  "iosFaceLux": "-20",
+  "androidEyeOpenRate": "0.2",
+  "androidLightScore": "200",
+  "androidLuxDefault": "150",
+  "androidFaceAreaMin": "0.2",
+  "androidFaceAreaMax": "0.5",
+  "androidFaceYawMin": "-25",
+  "androidFaceYawMax": "25",
+  "androidFacePitchMin": "-25",
+  "androidFacePitchMax": "25",
+  "androidFaceRollMin": "-20",
+  "androidFaceRollMax": "20",
+  "androidFacePointsVis": "0.8",
+  "androidFacePointsPercent": "0.4",
+  "recordList": [
+    "ZUK Z2131",
+    "Lenovo X3c70"
+  ],
+  "notPlayVoiceList": [
+    "PCHM10",
+    "PCHT10",
+    "PCHM30",
+    "PCHT30",
+    "PDAM10"
+  ],
+  "androidUseHighPixel": true,
+  "highPixelAndroidVersionThresgold": 28,
+  "androidUseHighPixelNew": false,
+  "androidHighPixelThreshold": 28,
+  "specialAppIdSet": [
+    {
+      "appIdSet": [
+        "IDARvqaL",
+        "IDAxX9F8",
+        "IDAxbkpv",
+        "IDANEam9",
+        "IDAupZ3d",
+        "IDAivo6L",
+        "IDAmZ7qY",
+        "IDAsIZlo",
+        "IDArltB0",
+        "IDAiO6lE"
+      ],
+      "iosFaceAreaMin": "0.15",
+      "iosFaceAreaMax": "0.75",
+      "androidFaceAreaMin": "0.13",
+      "androidFaceAreaMax": "0.55"
+    },
+    {
+      "appIdSet": [
+        "IDALCdcy",
+        "IDAtiuNZ",
+        "IDA13Jan"
+      ],
+      "iosFaceAreaMin": "0.1",
+      "iosFaceAreaMax": "0.3",
+      "androidFaceAreaMin": "0.1",
+      "androidFaceAreaMax": "0.3"
+    },
+    {
+      "appIdSet": [
+        "IDAj7JCb",
+        "IDAmScdd"
+      ],
+      "predetectFrameDropInterval": "1"
+    },
+    {
+      "appIdSet": [
+        "IDAz8gCG",
+        "TIDAUrYl"
+      ],
+      "iosFaceAreaMin": "0.07",
+      "iosFaceAreaMax": "0.3",
+      "androidFaceAreaMin": "0.07",
+      "androidFaceAreaMax": "0.3"
+    },
+    {
+      "appIdSet": [
+        "IDA7l3Rz",
+        "IDAd6dlN"
+      ],
+      "iosFaceAreaMin": "0.1",
+      "iosFaceAreaMax": "0.9",
+      "androidFaceAreaMin": "0.1",
+      "androidFaceAreaMax": "0.9"
+    },
+    {
+      "appIdSet": [
+        "IDAsl8T3",
+        "IDAx5EjE",
+        "IDADyvi5",
+        "IDAXssvz"
+      ],
+      "verifyBackVisibleTime": "10000"
+    },
+    {
+      "appIdSet": [
+        "IDAj7JCb",
+        "IDAmScdd"
+      ],
+      "verifyBackVisibleTime": "0"
+    },
+    {
+      "appIdSet": [
+        "IDAwP9xi"
+      ],
+      "iosFaceAreaMin": "0.1",
+      "iosFaceAreaMax": "0.2",
+      "androidFaceAreaMin": "0.1",
+      "androidFaceAreaMax": "0.2"
+    },
+    {
+      "appIdSet": [
+        "IDAEsW0Z"
+      ],
+      "highPixelAndroidVersionThresgold": 21
+    },
+    {
+      "appIdSet": [
+        "IDABBEP2"
+      ],
+      "androidFaceAreaMin": "0.23"
+    },
+    {
+      "appIdSet": [
+        "IDAnUWCh"
+      ],
+      "kyc_auth_tip_use_cam_reason": "用于修改头像、发布视频图片、扫码、实名认证、直播等"
+    },
+    {
+      "appIdSet": [
+        "IDAdcPmV",
+        "IDATU97z",
+        "IDA8d3OW",
+        "TIDAlazl",
+        "IDAsrz8U",
+        "TIDAUB8w",
+        "IDA3hmgD",
+        "TIDAhWEE",
+        "IDAXO32z",
+        "TIDA89Mr",
+        "TIDA1MWa",
+        "TIDALvaE",
+        "TIDAHTnW",
+        "IDALDnHr",
+        "IDAciyHX",
+        "IDAFScD2",
+        "IDAsnsHI",
+        "IDArVhGO",
+        "TIDAnFe7",
+        "IDA2WCkp",
+        "IDAIMOiJ",
+        "TIDA0zRb",
+        "IDAwrXRo",
+        "IDAhx1n5",
+        "IDA7yZdt",
+        "IDAj82Vr",
+        "IDAXdKgm",
+        "IDAA2vpB",
+        "IDA4fAoj",
+        "IDAQccmM",
+        "IDA7tU1J",
+        "IDA9ZBbv",
+        "IDA4PjyG",
+        "IDAAIouj",
+        "IDAT1i7v",
+        "IDA5vnql",
+        "TIDAthcU",
+        "IDApHDDB",
+        "TIDA9usb",
+        "IDAvZWR0",
+        "TIDAueJv",
+        "IDAjTafz",
+        "TIDAXaDa",
+        "TIDAjMes",
+        "IDAPOCUH"
+      ],
+      "returnUserImage": "1"
+    },
+    {
+      "appIdSet": [
+        "IDAgneOE",
+        "IDA5buCF",
+        "IDAbFNRU",
+        "IDAjziKH",
+        "IDACzcOw",
+        "IDAKvB3H"
+      ],
+      "recordTime": "2000"
+    },
+    {
+      "appIdSet": [
+        "IDATmyTr",
+        "IDAeP7Qs",
+        "IDA2WCkp"
+      ],
+      "recordTime": "1001"
+    },
+    {
+      "appIdSet": [
+        "IDAy0FMl",
+        "IDAvvNK4",
+        "IDATmyTr",
+        "IDAeP7Qs",
+        "IDA2WCkp"
+      ],
+      "recordYTVideo": "1"
+    },
+    {
+      "appIdSet": [
+        "IDAoNA6r",
+        "TIDAYu7P",
+        "IDALS5dw",
+        "TIDAq38I",
+        "TIDAD531",
+        "IDAA5zpO",
+        "TIDA1MWa",
+        "TIDALvaE",
+        "TIDAHTnW",
+        "IDALDnHr",
+        "IDA3CIy2",
+        "IDAUqjSv",
+        "IDAY4Az3",
+        "TIDAKesv",
+        "IDAvT37A",
+        "IDAN8YGZ",
+        "IDAj7JCb",
+        "IDAmScdd",
+        "IDAgXql5",
+        "IDAVd1oc",
+        "IDAzMfE6",
+        "IDA6Ba1v",
+        "IDAFqAdd",
+        "IDAaXtV5",
+        "IDAEIooY",
+        "IDAasgRF",
+        "IDA9SDtV",
+        "IDAzd6yr",
+        "IDAtPcRC",
+        "IDArzIm8",
+        "IDAQynjQ",
+        "IDAoruod",
+        "IDAnqKc8",
+        "IDAvsa49",
+        "IDAK4QYv",
+        "IDALBI0K",
+        "IDAjXiO6",
+        "IDANEdMw",
+        "IDApGsT3",
+        "IDAF1jJs",
+        "IDAoL4WJ",
+        "IDAomIbZ",
+        "IDAqDpvG",
+        "IDAbDl0S"
+      ],
+      "authType": "0"
+    },
+    {
+      "appIdSet": [
+        "IDA1ZPfU",
+        "IDA3XN3q",
+        "IDAhldDk",
+        "IDANcthz",
+        "IDAorNmr",
+        "IDAuMtBF",
+        "IDAbyZRx",
+        "IDAnB7Tv",
+        "IDAZTdR4",
+        "IDAb4tSw",
+        "IDAIVoyY",
+        "IDAhT8wl",
+        "IDAuxGSJ",
+        "IDAy0FMl",
+        "IDA0mYA1",
+        "IDAHQGuf",
+        "IDAbyZRx",
+        "IDAP65s9",
+        "IDAAP3JG",
+        "IDAgneOE",
+        "IDAxbkpv",
+        "IDANEam9",
+        "IDAupZ3d",
+        "IDAivo6L",
+        "IDAmZ7qY",
+        "IDAsIZlo",
+        "IDAuZI2a",
+        "IDASm5A1",
+        "IDADe8A5"
+      ],
+      "authStyle": "0"
+    },
+    {
+      "appIdSet": [
+        "IDA9QybH",
+        "TIDAAJE3",
+        "IDASTCEz"
+      ],
+      "willAsrAnswerRetryCount": "0"
+    },
+    {
+      "appIdSet": [
+        "IDAtPNLu",
+        "TIDAGskm",
+        "TIDAAJE3",
+        "IDA9QybH"
+      ],
+      "willAsrAnswerRetryCount": "1"
+    },
+    {
+      "appIdSet": [
+        "IDAPX61E",
+        "IDAHSUCc",
+        "IDA3XN3q",
+        "IDAy0FMl",
+        "IDAvvNK4",
+        "IDA2WCkp",
+        "IDAgneOE"
+      ],
+      "useTuringSDK_iOS": "1"
+    },
+    {
+      "appIdSet": [
+        "IDASTCEz"
+      ],
+      "will_service_volume_turnup_level": "0.5",
+      "will_service_screenshot_time": "0.05"
+    },
+    {
+      "appIdSet": [
+        "TIDAkpgo",
+        "IDALtP7z"
+      ],
+      "will_service_play_audio_lowest_volume": "0.3"
+    },
+    {
+      "appIdSet": [
+        "TIDAr5ln",
+        "IDAlrC31"
+      ],
+      "will_service_play_audio_lowest_volume": "0.3"
+    },
+    {
+      "appIdSet": [
+        "TIDABqyP",
+        "TIDARKYA",
+        "TIDAcGBI",
+        "TIDAdhIU",
+        "IDAMKqij",
+        "IDAyUvsU",
+        "IDAT9y4J",
+        "IDAaweqW",
+        "IDARMP3F",
+        "IDABbLWt",
+        "TIDA7yum"
+      ],
+      "will_service_play_audio_lowest_volume": "0.6"
+    },
+    {
+      "appIdSet": [
+        "IDA3XN3q",
+        "IDA4oLMF"
+      ],
+      "isGm": "0"
+    },
+    {
+      "appIdSet": [
+        "IDAjTafz",
+        "IDAAkDqD"
+      ],
+      "isGm": "1"
+    },
+    {
+      "appIdSet": [
+        "TIDA0001"
+      ],
+      "recordTime": "1000",
+      "authStyle": "2",
+      "isWillCheckShielding":"1",
+      "recordYTVideo": "1",
+      "iosFaceAreaMin": "0.1",
+      "iosFaceAreaMax": "0.75",
+      "androidFaceAreaMin": "0.1",
+      "androidFaceAreaMax": "0.55",
+      "iosFaceYawMin": "-15",
+      "iosFaceYawMax": "15",
+      "iosFacePitchMin": "-15",
+      "iosFacePitchMax": "15",
+      "iosFaceRollMin": "-15",
+      "iosFaceRollMax": "15",
+      "androidFaceYawMin": "-15",
+      "androidFaceYawMax": "15",
+      "androidFacePitchMin": "-15",
+      "androidFacePitchMax": "15",
+      "androidFaceRollMin": "-15",
+      "androidFaceRollMax": "15",
+      "useTuringSDK_iOS": "1",
+      "highPixelAndroidVersionThresgold": 21
+    },
+    {
+      "appIdSet": [
+        "TIDAacCm"
+      ],
+      "recordTime": "1000",
+      "authStyle": "2",
+      "isGm": "0",
+      "recordYTVideo": "1",
+      "iosFaceAreaMin": "0.1",
+      "iosFaceAreaMax": "0.75",
+      "androidFaceAreaMin": "0.1",
+      "androidFaceAreaMax": "0.55",
+      "useTuringSDK_iOS": "1",
+      "highPixelAndroidVersionThresgold": 21
+    }
+  ]
+}

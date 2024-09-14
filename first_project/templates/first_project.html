@@ -1,0 +1,17 @@
+{% extends 'nav_base.html' %}
+{% block content %}
+    <ul class="nav">
+        <li><a href="{% url 'movie:index' %}">电影</a></li>
+        <li><a href="{% url 'book:index' %}">图书1</a></li>
+        <li><a href="{% url 'book:index' %}">图书2</a></li>
+        <li><a href="{% url 'article:index' %}">文章</a></li>
+        <li><a href="{% url 'login:index' %}">登录</a></li>
+        <li><a href="{% url 'template_filter:index' %}">模板过滤器</a></li>
+        <li><a href="{% url 'template_include:index' %}">模板继承</a></li>
+        <li><a href="{% url 'template_static:index' %}">静态文件</a></li>
+        <li><a href="{% url 'db:index' %}">图书管理系统</a></li>
+        <li><a href="{% url 'uploadfile:index' %}">文件上传</a></li>
+    </ul>
+
+    <p>这是首页</p>
+{% endblock %}

@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    overflow: hidden;
+    background-color: #3a3a3a;
+    color: white;
+}
+
+.nav li{
+    float: left;
+    list-style: none;
+    padding: 10px;
+    margin: 0 10px ;
+}
+
+.nav a{
+    text-decoration: none; /* 取消a标签下划线 */
+    color: inherit;
+}
+
+.nav li a:hover {
+    color: lightblue;
+}
+
+.text {
+    font-size: 16px;
+    line-height: 1.5;
+}

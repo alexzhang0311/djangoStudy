@@ -3,7 +3,7 @@ from book import views
 
 app_name = "book"
 urlpatterns = [
-    path('', views.book),
+    path('', views.book,name='index'),
     path('login/<book_id>', views.book_login, name='sso'),
     path('detail/<book_id>/', views.book_detail),
     path('author/', views.book_author),

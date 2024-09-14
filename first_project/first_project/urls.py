@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include,re_path,converters
 from django.http import HttpResponse
+from django.shortcuts import render,redirect,reverse
+
 def index(request):
-    return HttpResponse("首页")
+    return render(request, "first_project.html",context={"title":"Django学习导航"})
 
 
 def blackhole(request):
@@ -41,6 +43,7 @@ urlpatterns = [
     path('template_include/',include('template_include.urls')),
     path('template_static/',include('template_static.urls')),
     path('db/',include('db_operation.urls')),
+    path('uploadfile/',include('uploadfile.urls')),
     re_path(r"^list/(?P<year>\d{4})/$", relist),
     re_path(r'.*', blackhole)
 ]

@@ -7,7 +7,7 @@ from article import views
 app_name = "article"
 
 urlpatterns = [
-    path('', views.index),
+    path('', views.index,name='index'),
     path('login/', views.article_login,name='login'),
     path('redir/', views.redir,name='redirect'),
     path('high/<id>/<name>/', views.article_highlight,name='high'),

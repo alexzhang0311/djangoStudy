@@ -1,0 +1,20 @@
+{% extends 'nav_base.html' %}
+{% block content %}
+
+    <ul class="nav">
+        <li><a href="/uploadfile/">文件上传首页</a></li>
+    </ul>
+    <br>
+    <form method="post" action="{% url 'uploadfile:content'%}">
+        {% csrf_token %}
+        <label for="my-select">选择你想查看的文件</label>
+        <select id="uploadfile" name="uploadfile">
+            {% for file in files %}
+                <option value="{{ file.1 }}" {% if file.1 == selected_option %}selected{% endif %}>{{ file.1 }}</option>
+            {% endfor %}
+        </select>
+        <input type="hidden" name="selected-option" value="{{ selected_option }}">
+        <br><br>
+        <input type="submit" value="获取文件内容">
+    </form>
+{% endblock %}

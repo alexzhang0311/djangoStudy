@@ -1,0 +1,13 @@
+{% extends 'nav_base.html' %}
+{% block content %}
+    <ul class="nav">
+        <li><a href="/uploadfile/">文件上传首页</a></li>
+    </ul>
+    <div style="margin: 10px 20px;">
+        <form action="{% url 'uploadfile:upload' %}" method='post' enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="myfile"> <br><br>
+            <input type="submit" value="提交">
+        </form>
+    </div>
+{% endblock %}

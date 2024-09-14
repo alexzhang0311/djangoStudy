@@ -1,0 +1,8 @@
+{% extends 'nav_base.html' %}
+{% block content %}
+    <ul class="nav">
+        <li><a href="/">首页</a></li>
+        <li><a href="{% url 'uploadfile:upload' %}">文件上传</a></li>
+        <li><a href="{% url 'uploadfile:display' %}">文件读取</a></li>
+    </ul>
+{% endblock %}
