@@ -1,0 +1,12 @@
+{% extends 'nav_base.html' %}
+{% block content %}
+<ul class="nav">
+    <li><a href="/">首页</a></li>
+</ul>
+
+<form action="{% url 'jsonconvert:index' %}" method="post" style="margin: 10px  20px;">
+    <label for="my-textbox">请输入文本：</label> <br><br>
+    <input type="text" id="my-textbox" name="my-textbox" style="width: 500px;height: 100px;"><br><br>
+    <button type="submit">提交</button>
+</form>
+{% endblock %}

@@ -28,6 +28,8 @@ def submit_form(request):
     if request.method == "POST":
         username = request.POST.get('username')
         password = request.POST.get('password')
+        checkbox = request.POST.getlist("tag1")
+        print(checkbox)
         token = username
         nexturl = request.POST.get('next')
         url = nexturl + "?token={}".format(token)

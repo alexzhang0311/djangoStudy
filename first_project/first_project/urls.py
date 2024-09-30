@@ -44,6 +44,8 @@ urlpatterns = [
     path('template_static/',include('template_static.urls')),
     path('db/',include('db_operation.urls')),
     path('uploadfile/',include('uploadfile.urls')),
+    path('json/',include('jsonconvert.urls')),
+    path('csv/',include('csvhandle.urls')),
     re_path(r"^list/(?P<year>\d{4})/$", relist),
     re_path(r'.*', blackhole)
 ]

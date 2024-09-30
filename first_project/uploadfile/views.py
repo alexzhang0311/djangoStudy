@@ -15,7 +15,7 @@ def add_file(filename):
 
 
 def index(request):
-    return render(request, "uploadfile_index.html")
+    return render(request, "uploadfile_index.html",context={"title":"文件上传"})
 
 def uploadfile(request):
     if request.method == "POST":
