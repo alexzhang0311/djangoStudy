@@ -46,6 +46,9 @@ urlpatterns = [
     path('uploadfile/',include('uploadfile.urls')),
     path('json/',include('jsonconvert.urls')),
     path('csv/',include('csvhandle.urls')),
+    path('classview/',include('class_view.urls')),
+    path('accounts/', include('accounts.urls')),
     re_path(r"^list/(?P<year>\d{4})/$", relist),
     re_path(r'.*', blackhole)
+    
 ]

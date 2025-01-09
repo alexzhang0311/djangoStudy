@@ -1,64 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template Include</title>
-    <style>
-        header {
-            display: flex;
-            justify-content: center; /* 水平居中对齐 */
-        }
-
-        .nav {
-            overflow: hidden;
-        }
-
-        .nav li {
-            float: left;
-            list-style: none;
-            margin: 0 20px;
-        }
-
-        footer {
-            background-color: #ccc;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 50px;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-    </style>
+    <title>{% block title %}长颈鹿的家{% endblock %}</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <ul class="nav">
-            <li><a href="{% url 'template_include:index' %}">首页</a></li>
-            <li><a href="{% url 'template_include:company' %}">公司</a></li>
-            <li><a href="{% url 'template_include:campus' %}">校园</a></li>
-            <li><a href="#">{{ username }}</a></li>
-        </ul>
-    </header>
-    
-    <div class="main">
-        {% block content %}
-        <div>这里是父模板的代码</div>
-        {% endblock %}
-    </div>
-
-    <footer>
-        <div class="footer-content">
-            这是页尾部分
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">网站名称</a>
+            <div class="navbar-nav ms-auto">
+                {% if user.is_authenticated %}
+                    <span class="nav-item nav-link">欢迎, {{ user.username }}</span>
+                    <a class="nav-item nav-link" href="{% url 'accounts:change_password' %}">修改密码</a>
+                    <a class="nav-item nav-link" href="{% url 'accounts:logout' %}">退出</a>
+                {% else %}
+                    <a class="nav-item nav-link" href="{% url 'accounts:login' %}">登录</a>
+                    <a class="nav-item nav-link" href="{% url 'accounts:register' %}">注册</a>
+                {% endif %}
+            </div>
         </div>
-    </footer>
+    </nav>
 
+    {% block content %}
+    {% endblock %}
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

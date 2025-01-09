@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'template_filter',
     'template_static',
     'db_operation',
+    'accounts',
 ]
 
 MIDDLEWARE = [

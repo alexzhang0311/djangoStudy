@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect,reverse
 from django.db import connection
 from django.http import HttpResponse
+from .models import OrmBook
 
 def get_cursor():
     return connection.cursor()
@@ -50,3 +51,26 @@ def book_change(request):
         return redirect(reverse("db:index"))
     else:
         return HttpResponse("Invalid request method.")
+
+def ormBook(request):
+    ###数据添加###
+    # book = OrmBook(name="三国演义",author="罗贯中",price="100")
+    # book = OrmBook(name="西游记",author="吴承恩",price="200")
+    # book.save()
+    # return HttpResponse("数据添加成功")
+    ###数据查询###
+    # book = OrmBook.objects.get(pk=1)
+    # book = OrmBook.objects.filter(name="西游记")[0]
+    # print(book)
+    # return HttpResponse(book)
+
+    ###数据删除###
+    # book = OrmBook.objects.get(pk=1)
+    # book.delete()
+    # return HttpResponse("数据删除成功")
+
+    ###数据修改
+    book = OrmBook.objects.filter(author="吴承恩")[0]
+    book.price = 100
+    book.save()
+    return HttpResponse("数据修改成功")
